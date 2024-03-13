@@ -4,6 +4,10 @@ Implementation of [NetVlad](https://arxiv.org/abs/1511.07247) in PyTorch, includ
 
 ## Adaptions
 
+<p align="center">
+    <img src="content/area.png" alt="drawing" width="400"/>
+</p>
+
 In *fourseasons.py* data loading of our dataset in the NetVLAD pipeline is managed, which uses the information given in *data*. There, database images are named in a *x_y_z* format, where *x* and *y* are UTM coordinate (within zone 32U) and *z* is the height above ground used to calculate the bounding box of the image, as also mentioned in [sem-clustering](https://github.com/hlzmnhnry/sem-clustering). In *evaluate_clustering.py* the VPR evaluation of the soft-assigned queries is implemented, which needs extraced features from the testing, enabled by `--storetest`. The evaluation might then be called by:
 
 ``
