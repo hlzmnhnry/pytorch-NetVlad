@@ -67,7 +67,7 @@ parser.add_argument('--pooling', type=str, default='netvlad', help='type of pool
         choices=['netvlad', 'max', 'avg'])
 parser.add_argument('--num_clusters', type=int, default=64, help='Number of NetVlad clusters. Default=64')
 parser.add_argument('--margin', type=float, default=0.1, help='Margin for triplet loss. Default=0.1')
-parser.add_argument('--split', type=str, default='train', help='Data split to use for testing. Default is val', 
+parser.add_argument('--val', type=str, default='train', help='Data split to use for testing. Default is val', 
         choices=['test', 'train', 'val'])
 parser.add_argument('--fromscratch', action='store_true', help='Train from scratch rather than using pretrained models')
 parser.add_argument('--storetest', action='store_true', help='Store infered descriptors if mode=test')
